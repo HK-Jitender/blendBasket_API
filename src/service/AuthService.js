@@ -65,7 +65,7 @@ class AuthService {
         await this.tokenDao.remove({
             token: req.body.access_token,
             type: tokenTypes.ACCESS,
-            blacklisted: false,
+            blacklisted: false, 
         });
         await this.redisService.removeToken(req.body.access_token, 'access_token');
         await this.redisService.removeToken(req.body.refresh_token, 'refresh_token');
