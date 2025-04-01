@@ -1,6 +1,7 @@
 const express = require('express');
 const authRoute = require('./authRoute');
 const roleRoute = require('./roleRoute');
+const permissionRoute = require('./permissionRoute');
 
 const router = express.Router();
 
@@ -11,6 +12,10 @@ const defaultRoutes = [
     }, {
         path: '/role',
         route: roleRoute,
+    },
+    {
+        path: '/permission', // Add this new permission route
+        route: permissionRoute,
     },
 
 ];
